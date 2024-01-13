@@ -10,5 +10,5 @@ CREATE TABLE movit.usuario (
     id INT PRIMARY KEY AUTO_INCREMENT,
     email VARCHAR(255) NOT NULL,
     senha VARCHAR(255) NOT NULL,
-    tipousuario BIT NOT NULL
+    tipousuario INT NOT NULL
 );
