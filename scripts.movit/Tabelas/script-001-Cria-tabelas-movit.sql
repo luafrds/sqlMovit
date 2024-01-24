@@ -23,3 +23,26 @@ CREATE TABLE movit.cantina (
     valor decimal(10,2) NOT NULL,
     quantidade INT NOT NULL
 );
+
+/*
+Criar tabela de membro
+*/
+
+CREATE TABLE movit.membro (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nomecompleto VARCHAR(255),
+    email VARCHAR(255),
+    datanascimento DATE,
+    situacaomembro INT NOT NULL,
+    idusuario INT,
+    FOREIGN KEY (idusuario) REFERENCES usuario(id)
+);
+
+/*
+Criar tabela de estado
+*/
+CREATE TABLE movit.estado (
+    id INT PRIMARY KEY AUTO_INCREMENT,,
+    descricao VARCHAR(30) NOT NULL,
+    sigla VARCHAR(2) NOT NULL
+);/*
