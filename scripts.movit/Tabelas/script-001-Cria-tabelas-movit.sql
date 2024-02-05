@@ -45,4 +45,20 @@ CREATE TABLE movit.estado (
     id INT PRIMARY KEY AUTO_INCREMENT,,
     descricao VARCHAR(30) NOT NULL,
     sigla VARCHAR(2) NOT NULL
-);/*
+);
+
+/*
+Cria tabela de evento
+*/
+
+CREATE TABLE movit.evento (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(255),
+    dataevento DATE,
+    cep VARCHAR(8),
+    logradouro VARCHAR(255),
+    numero VARCHAR(10),
+    complemento VARCHAR(50),
+    idcidade INT,
+    FOREIGN KEY (idcidade) REFERENCES cidade(id)
+);
