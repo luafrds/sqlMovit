@@ -42,7 +42,16 @@ CREATE TABLE movit.membro (
 Criar tabela de estado
 */
 CREATE TABLE movit.estado (
-    id INT PRIMARY KEY AUTO_INCREMENT,,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     descricao VARCHAR(30) NOT NULL,
     sigla VARCHAR(2) NOT NULL
-);/*
+);
+/*
+Criar tabela de cidade
+*/
+CREATE TABLE movit.cidade (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    descricao VARCHAR(100),
+    idestado INT,
+    FOREIGN KEY (idestado) REFERENCES estado(id)
+);
